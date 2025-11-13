@@ -101,3 +101,42 @@ Step-by-step guide for migrating virtual machines from VMware (VMDK/ESXi) to Mic
 - Test network connectivity and confirm all disks are visible
 
 - Take a checkpoint/snapshot after confirming the VM runs properly
+
+## Problems & Support
+
+If you run into problems after migration I can try to help. Common issues and quick notes:
+
+- Windows asks to reset your Microsoft PIN after boot
+
+  - Quick hint: try signing in with your Microsoft account password first, then go to Settings → Accounts → Sign-in options to reset the PIN.
+
+  - If you can’t sign in at all, boot into Safe Mode or use another admin account to reset the PIN.
+
+- BitLocker triggered and encrypted drives
+
+  - BitLocker will trigger 90% of the time when using existing Hyper-V VM to migrate
+      
+      - Try creating a completely new Hyper-V VM before migrating and only use the freshly created VHDX as the destination drive
+
+  - BitLocker can lock the system when hardware/firmware changes. If you have the BitLocker recovery key, use it to unlock the drive
+
+  - If you don’t have the key, do not enter random keys — stop and contact me; there are safer recovery steps to try
+
+- Device/driver issues or missing network
+
+  - Check Device Manager for missing drivers and install Integration Services (or latest guest additions)
+
+  - Recreate or attach the correct virtual network switch in Hyper-V
+
+- VM won’t boot or blue screens
+
+  - Verify VM generation (1 vs 2) and secure boot settings; attach the VHDX to a recovery VM to inspect logs
+
+  - If you see boot loader errors, the disk conversion may have missed the system reserved partition — I can advise recovery steps
+
+## How I can help
+
+If you want my assistance, contact me and I’ll try to help troubleshoot the issue. Please do not share passwords, private keys, or full BitLocker recovery keys in public posts
+
+## License  
+This project is licensed under the MIT License
