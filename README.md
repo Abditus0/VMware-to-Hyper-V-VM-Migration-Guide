@@ -58,7 +58,7 @@ Step-by-step guide for migrating virtual machines from VMware to Microsoft Hyper
 
 - Choose Generation 1 for BIOS-based VMs
 
-- Choose Generation 2 for UEFI-based VMs
+- Choose Generation 2 for UEFI-based VMs (most common)
 
 - Specify startup memory (e.g., 4096 MB)
 
