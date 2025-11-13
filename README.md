@@ -4,7 +4,7 @@
 
 ### Description
 
-Step-by-step guide for migrating virtual machines from VMware (VMDK/ESXi) to Microsoft Hyper-V (VHDX) using StarWind V2V Converter. This guide covers disk conversion, verification, and importing the VM into Hyper-V. Ideal for IT professionals and system administrators who need a smooth, reliable migration process.
+Step-by-step guide for migrating virtual machines from VMware to Microsoft Hyper-V using StarWind V2V Converter. This guide covers disk conversion, verification, and importing the VM into Hyper-V. Ideal for IT professionals and system administrators who need a smooth, reliable migration process.
 
 ### Requirements
 
